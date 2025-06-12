@@ -1,0 +1,108 @@
+/* Center the entire main content */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/* ----------------------------------------
+   Sales Component Styles
+---------------------------------------- */
+.sales-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.sales-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sales-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.sales-form label {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.sales-form input,
+.sales-form select {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.sales-form button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.sales-form button:hover {
+  background-color: #1565c0;
+}
+
+.sales-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+.sales-table th,
+.sales-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.sales-table th {
+  background-color: #1976d2;
+  color: white;
+}
+
+.sales-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.sales-table button {
+  padding: 6px 12px;
+  margin: 2px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+}
+
+.sales-table button.edit-btn {
+  background-color: #0288d1;
+}
+
+.sales-table button.edit-btn:hover {
+  background-color: #0277bd;
+}
+
+.sales-table button.delete-btn {
+  background-color: #d32f2f;
+}
+
+.sales-table button.delete-btn:hover {
+  background-color: #c62828;
+}

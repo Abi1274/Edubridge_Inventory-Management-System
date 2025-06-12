@@ -1,0 +1,65 @@
+<div class="container-wrap">
+  <div class="main-content">
+    <div class="container">
+      <div class="page-title">Record a Sale</div>
+
+      <form (ngSubmit)="addSales()">
+        <label>Invoice Number:</label>
+        <input type="text" [(ngModel)]="newSale.invoiceNumber" name="invoiceNumber" required />
+
+        <label>Customer Name:</label>
+        <input type="text" [(ngModel)]="newSale.customerName" name="customerName" required />
+
+        <label>Product Name:</label>
+        <input type="text" [(ngModel)]="newSale.productName" name="productName" required />
+
+        <label>Quantity:</label>
+        <input type="number" [(ngModel)]="newSale.quantity" name="quantity"
+               min="1" (input)="calculateTotal()" required />
+
+        <label>Total Price (₹):</label>
+        <input type="number" [(ngModel)]="newSale.totalPrice" name="totalPrice" min="0" required />
+
+        <label>Sale Date:</label>
+        <input type="date" [(ngModel)]="newSale.saleDate" name="saleDate" required />
+
+        <button type="submit">Save Sale</button>
+      </form>
+
+      <hr />
+
+      <div class="page-title">Sales History</div>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Invoice</th>
+              <th>Customer</th>
+              <th>Product</th>
+              <th>Qty</th>
+              <th>Total (₹)</th>
+              <th>Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let s of sales; let i = index">
+              <td>{{ i+1 }}</td>
+              <td>{{ s.invoiceNumber }}</td>
+              <td>{{ s.customerName }}</td>
+              <td>{{ s.productName }}</td>
+              <td>{{ s.quantity }}</td>
+              <td>{{ s.totalPrice }}</td>
+              <td>{{ s.saleDate }}</td>
+              <td>
+                <button (click)="deleteSale(s.id)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>

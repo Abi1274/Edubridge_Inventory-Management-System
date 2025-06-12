@@ -1,0 +1,30 @@
+<div class="customer-container">
+  <h2>Customer Management</h2>
+  <form (ngSubmit)="onSubmit()">
+    <input type="text" [(ngModel)]="customer.name" name="name" required placeholder="Name" />
+    <input type="email" [(ngModel)]="customer.email" name="email" required placeholder="Email" />
+    <input type="text" [(ngModel)]="customer.phone" name="phone" required placeholder="Phone" />
+    <button type="submit">{{ editingIndex !== null ? 'Update' : 'Add' }}</button>
+    <button type="button" *ngIf="editingIndex !== null" (click)="cancelEdit()">Cancel</button>
+  </form>
+
+  <hr />
+
+  <table>
+    <thead>
+      <tr><th>#</th><th>Name</th><th>Email</th><th>Phone</th><th>Actions</th></tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cust of customers; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ cust.name }}</td>
+        <td>{{ cust.email }}</td>
+        <td>{{ cust.phone }}</td>
+        <td>
+          <button (click)="editCustomer(i)">Edit</button>
+          <button (click)="deleteCustomer(i)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

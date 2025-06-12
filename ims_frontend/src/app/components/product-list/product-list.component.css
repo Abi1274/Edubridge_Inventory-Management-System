@@ -1,0 +1,55 @@
+/* Base container styling */
+.container {
+  max-width: 1000px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+
+h2.text-primary {
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.table {
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
+
+.table th,
+.table td {
+  vertical-align: middle !important;
+}
+
+
+.btn-info {
+  background-color: #0288d1;
+  border: none;
+  color: white;
+}
+
+.btn-info:hover {
+  background-color: #0277bd;
+}
+
+.btn-danger {
+  background-color: #d32f2f;
+  border: none;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c62828;
+}
+
+
+@media (max-width: 576px) {
+  .btn {
+    margin-bottom: 5px;
+    width: 100%;
+  }
+}

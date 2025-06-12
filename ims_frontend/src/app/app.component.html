@@ -1,0 +1,33 @@
+<!-- app.component.html -->
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <div class="container-fluid">
+    
+    <header class="fixed-top-header">
+  <h2 class="text-white text-center py-3 m-0">Inventory Management System</h2>
+</header>
+<div class="collapse navbar-collapse">
+  <br/>
+      <ul class="navbar-nav me-auto">
+        <br/>
+        <li class="nav-item" *ngIf="authService.isLoggedIn()">
+          <a class="nav-link" routerLink="/products">Products</a>
+        </li>
+        <li class="nav-item" *ngIf="authService.isLoggedIn()">
+          <a class="nav-link" routerLink="/add-product">Add Product</a>
+        </li>
+         <li class="nav-item" *ngIf="authService.isLoggedIn()">
+          <a class="nav-link" routerLink="/sales">Add Sales</a>
+        </li>
+         <li class="nav-item" *ngIf="authService.isLoggedIn()">
+          <a class="nav-link" routerLink="/customer">Add Customer</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item" *ngIf="authService.isLoggedIn()">
+          <a class="nav-link" (click)="logout()" style="cursor: pointer;">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

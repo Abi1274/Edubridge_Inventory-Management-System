@@ -1,0 +1,66 @@
+<div class="container py-4">
+  <br/>
+  <h2 class="text-white mb-4">Product Management</h2>
+
+  <form (ngSubmit)="saveProduct()" #productForm="ngForm" class="row g-3 text-white">
+    <div class="col-12 col-md-6">
+      <label>Product Code</label>
+      <input type="text" class="form-control" [(ngModel)]="product.code" name="code" required /> <!-- Accepts: Product Code -->
+    </div>
+    <div class="col-12 col-md-6">
+      <label>Product Name</label>
+      <input type="text" class="form-control" [(ngModel)]="product.name" name="name" required /> <!-- Accepts: Product Name -->
+    </div>
+    <div class="col-12 col-md-6">
+      <label>Total Quantity</label>
+      <input type="number" class="form-control" [(ngModel)]="product.totalQuantity" name="totalQuantity" required /> <!-- Accepts: Total Quantity -->
+    </div>
+    <div class="col-12 col-md-6">
+      <label>Remaining Quantity</label>
+      <input type="number" class="form-control" [(ngModel)]="product.remainingQuantity" name="remainingQuantity" required /> <!-- Accepts: Remaining Quantity -->
+    </div>
+    <div class="col-12 col-md-6">
+      <label>Price</label>
+      <input type="number" class="form-control" [(ngModel)]="product.price" name="price" required /> <!-- Accepts: Price -->
+    </div>
+    <div class="col-12 col-md-6">
+      <label>Comments</label>
+      <textarea class="form-control" [(ngModel)]="product.comments" name="comments"></textarea> <!-- Accepts: Comments -->
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary w-100">{{ isEdit ? 'Update Product' : 'Add Product' }}</button>
+    </div>
+  </form>
+
+  <hr class="my-5">
+
+  <table class="table table-bordered table-striped bg-white">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Product Code</th>
+        <th scope="col">Name</th>
+        <th scope="col">Total Qty</th>
+        <th scope="col">Remaining Qty</th>
+        <th scope="col">Price</th>
+        <th scope="col">Comments</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of products; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ p.code }}</td>
+        <td>{{ p.name }}</td>
+        <td>{{ p.totalQuantity }}</td>
+        <td>{{ p.remainingQuantity }}</td>
+        <td>{{ p.price }}</td>
+        <td>{{ p.comments }}</td>
+        <td>
+          <button class="btn btn-sm btn-info me-2" (click)="editProduct(p)">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="deleteProduct(p.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
