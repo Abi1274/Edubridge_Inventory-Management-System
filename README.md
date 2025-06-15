@@ -9,7 +9,7 @@ The Inventory Management System is a full-stack web application built with Angul
 * ✅ **User Authentication (JWT-based)**
 * 📦 **Manage Products** (Add, Edit, Delete, View)
 * 👥 **Customer Management**
-* 💰 **Sales Tracking**
+* 💰 **Sales Recording**
 * 🔒 **Secure REST APIs** with Spring Security
 * 🛢️ **MySQL Database Integration**
 * 📱 **Fully responsive Angular frontend**
@@ -119,7 +119,7 @@ You can use **Thunder Client** (VS Code) or **Postman** to test APIs.
 ```json
 {
   "username": "admin",
-  "password": "admin"
+  "password": "1234"
 }
 ```
 
