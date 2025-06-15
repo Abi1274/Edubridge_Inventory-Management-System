@@ -152,7 +152,7 @@ You can use **Thunder Client** (VS Code) or **Postman** to test APIs.
 **Login Page**
 ![image](https://github.com/user-attachments/assets/1fd78d29-7ca6-421e-aaee-aab705e9c70e)
 **Customer Management Page**
----![Screenshot 2025-06-15 112028](https://github.com/user-attachments/assets/ab168f6b-f532-4509-bbee-cf0a84e09120)
+![Screenshot 2025-06-15 112028](https://github.com/user-attachments/assets/ab168f6b-f532-4509-bbee-cf0a84e09120)
 **Product Management Page**
 ![Screenshot 2025-06-15 112003](https://github.com/user-attachments/assets/7d3d4c59-6054-4820-80aa-e38c94b3b8d5)
 **Product List Page**
