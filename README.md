@@ -148,7 +148,7 @@ You can use **Thunder Client** (VS Code) or **Postman** to test APIs.
 
 ---
 
-## 📷 **Screenshots **
+## 📷 **Screenshots**
 
 **Login Page**
 
